@@ -1,10 +1,177 @@
-
+<!DOCTYPE html>
 <html lang="fr">
-    <title>Ma VCard - [Votre Nom]</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkin Events - VCard</title>
     
-    <img src="https://github.com/linkinevents/linkincard/blob/main/final%20logo%202.png?raw=true"
-     alt="Photo de profil de link In Events" 
-     itemprop="image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+    <style>
+        :root {
+            --primary-color: #007BFF; /* Bleu pour les liens principaux */
+            --accent-color: #E9543C; /* Couleur terre/orangée du logo */
+            --whatsapp-color: #25D366;
+            --facebook-color: #1877F2;
+            --background-color: #f4f7f6;
+            --card-background: #ffffff;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .vcard-container {
+            background-color: var(--card-background);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        /* --- Style du Logo --- */
+        .logo-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .logo-section img {
+            width: 100%; /* Ajustement à la largeur du conteneur */
+            max-width: 300px; 
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* --- Style des Rectangles d'Action (Rubriques) --- */
+        .action-rectangle {
+            background-color: var(--card-background);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 15px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+
+        .action-rectangle:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .action-rectangle h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-size: 1.2em;
+        }
+
+        /* --- Style des Boutons Spécifiques --- */
+        .action-button {
+            display: block;
+            width: 93%;
+            padding: 12px 15px;
+            margin-top: 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        
+        /* Bouton Téléphone (Ajout au répertoire) */
+        .btn-contact {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+        .btn-contact:hover {
+            background-color: #0056b3;
+        }
+
+        /* Bouton WhatsApp */
+        .btn-whatsapp {
+            background-color: var(--whatsapp-color);
+            color: white;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1DA851;
+        }
+
+        /* Bouton Facebook */
+        .btn-facebook {
+            background-color: var(--facebook-color);
+            color: white;
+        }
+        .btn-facebook:hover {
+            background-color: #1459a5;
+        }
+        
+        .action-button i {
+            margin-right: 8px;
+        }
+        
+        .contact-number {
+            font-size: 1.3em;
+            color: #333;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .download-vcf {
+            margin-top: 25px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vcard-container">
+        
+        <header class="logo-section">
+            <img src="https://raw.githubusercontent.com/LinkinEvents/linkincard/main/final%20logo%202.png" 
+                 alt="Logo Linkin Events" 
+                 onerror="this.src='placeholder-logo.png';">
+            
+        </header>
+
+        <div class="action-rectangle">
+            <span class="contact-number">(+216) 50 477 546</span>
+            
+            <a href="https://github.com/linkinevents/linkincard/blob/main/linkin-events.vcf" class="action-button btn-contact" download>
+                <i class="fas fa-address-book"></i> Ajouter au répertoire
+            </a>
+            
+            <a href="https://wa.me/21650477546" target="_blank" class="action-button btn-whatsapp">
+                <i class="fab fa-whatsapp"></i>WhatsApp
+            </a>
+        </div>
+        
+        <div class="action-rectangle">
+
+            <a href="https://www.facebook.com/linkinevents.byadhar" target="_blank" class="action-button btn-facebook">
+                <i class="fab fa-facebook-f"></i>Facebook
+            </a>
+            
+            </div>
+
+        </div>
 </body>
 </html>
